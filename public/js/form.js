@@ -1,10 +1,7 @@
-/* alert('Curso de Javascript'); */
+const formCreateUser = document.getElementById('form-create-user');
 
-// COMMENT
-
-const val1 = 100;
-const val2 = 10;
-
-let operation = val1 + val2;
-
-let resultDescription = 'The result is ' + operation;
+formCreateUser.addEventListener('submit', function(event){
+    event.preventDefault();
+    
+    console.log('event', event)
+});

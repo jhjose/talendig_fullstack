@@ -18,7 +18,7 @@
 <body>
     <div class="d-flex flex-row justify-content-center flex-wrap">
         <h1 style="width: 100%; text-align: center;">Create user:</h1>
-        <form action="http://localhost:8000/user" method="post"> <!--GET, POST, PUT, DELETE-->
+        <form id="form-create-user" action="" method="post"> <!--GET, POST, PUT, DELETE-->
             <div class="m10px">
                 <label for="username">Username:</label>
                 <input type="text" id="username" value="" placeholder="Write the username" class="form-control" required>
@@ -35,6 +35,10 @@
                 <label for="country">Pa&iacute;s:</label>
                 <select name="country" id="country" class="form-select">
                     <option value="DO">Dominican Republic</option>
+                    <option value="HI">Haiti</option>
+                    <option value="HI">Puerto Rico</option>
+                    <option value="HI">Cuba</option>
+                    <option value="HI">Jamaica</option>
                     <option value="US">United State</option>
                 </select>
             </div>
@@ -46,7 +50,5 @@
     </div>
 
     <script src="../public/js/form.js"></script>
-    <script src="../public/js/logical_conditionals.js"></script>
-    <script src="../public//js/switch.js"></script>
 </body>
 </html>

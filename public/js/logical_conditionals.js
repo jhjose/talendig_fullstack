@@ -29,13 +29,82 @@ switch(value2){
     break;
 }
 
+switch(message_is_up_18){
+    case 'El estudiante es mayor a 16':
+        // No se cumple
+        break;
+    case 'El estudiante es mayor a 18':
+        // Se cumple
+        break;
+    default: 
+        // Si ninguno de los dos se cumple, se ejecuta este caso por defecto.
+        break;
+}
+
 // COMILLAS SIMPLES Y DOBLES
 //let result2 = value2 * value1;
 //let result_example3 = `${result2} es el resultado ideal para el cliente. Sin embargo el primer resultado ${value1} es el que el cliente prefiere`;
 //let result_example2 = result2 + " es el resultado" + " ideal para el cliente. Sin embargo el primer resultado " + value1 + " es el que el cliente prefiere";
 
+const cal_result = `El estudiante tiene ${age_student} años y ${age_student + 10} trabajando en Talendig.`;
+
+//alert(cal_result);
+
 
 /* ---------- FUNCTIONS --------------- */
+const calculator = {
+    operation: '',
+    tang: {
+        run: (state)=>{
+            // strict method
+            switch(state){
+                case 'on':
+                    return true;
+                break;
+                case 'off':
+                    return false;
+                break;
+                case 'none':
+                    return false;
+                break;
+                case 'admin':
+                    return true;
+                break;
+                default:
+                    return false;
+                break;
+            }
+/*
+            if(state === 'on'){
+                return true;
+            } else if(state === 'off') {
+                return false;
+            }
+            else if(state === 'none') {
+                return false;
+            }
+            else if(state === 'admin') {
+                return true;
+            }
+            else{
+                return false;
+            }
+*/
+        },
+    },
+    sum: (value1, value2)=>{
+
+    },
+    rest: function(value1, value2){
+
+    },
+    mult: (value1, value2)=>{
+
+    },
+}
+
+console.log("calculator.tang.run('on')", calculator.tang.run('off'));
+
 function sum(value1, value2){
     return value1 + value2;
 }
