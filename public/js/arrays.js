@@ -8,16 +8,11 @@ fruits.push("Fresa");
 
 // forEach para recorrer todos los elementos del Array (Matriz)
 fruits.forEach(function(element, indice){
-
-    //findFruit(element);
-
     if(indice === 0){
         fruits.push("Plátano");
     }else{
         fruits.unshift("Ciruela");
     }
-
-    //console.log("element.split('n')", element.split('n'))
 });
 
 //console.log('fruits: ', fruits)

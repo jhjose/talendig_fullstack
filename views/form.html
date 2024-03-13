@@ -32,15 +32,15 @@
                 <input type="password" id="password" value="" placeholder="Write your password" class="form-control" required>
             </div>
             <div class="m10px">
+                <label for="state">Estado:</label>
+                <input type="checkbox" id="state" class="form-checkbox">
+                <!--
+                <input type="number" id="state" class="form-control" placeholder="Number type" required>
+                -->
+            </div>
+            <div class="m10px">
                 <label for="country">Pa&iacute;s:</label>
-                <select name="country" id="country" class="form-select">
-                    <option value="DO">Dominican Republic</option>
-                    <option value="HI">Haiti</option>
-                    <option value="HI">Puerto Rico</option>
-                    <option value="HI">Cuba</option>
-                    <option value="HI">Jamaica</option>
-                    <option value="US">United State</option>
-                </select>
+                <select name="country" id="country" class="form-select"></select>
             </div>
 
             <div class="text-center">
@@ -49,6 +49,7 @@
         </form>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../public/js/form.js"></script>
 </body>
 </html>
