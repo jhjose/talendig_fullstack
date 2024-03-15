@@ -9,25 +9,29 @@ formCreateUser.addEventListener('submit', function(event){
     const state = document.getElementById('state').value;
     const country = document.getElementById('country').value;
 
-    console.log('state', state)
+    const data = {
+        username: username,
+        email: email,
+        password: password,
+        state: state,
+        country: country,
+    }
 
     axios({
         // get: para obtener datos, post: insertar datos, put: actualizar datos, delete: eleminar datos.
         method: 'post', 
-        url: '',
+        url: 'http://localhost:3330/users/create',
+        data: data,
     }).then( response => {
         if(response.status === 200){
-            //console.log('response', response);
-            response.data.forEach(element => {
-                console.log('element', element);
-            });
+            console.log('response', response);
         }
     }).catch( error => {
         console.log('error', error);
     });
 
 });
-
+ 
 function getCountries(){
     let country_select = document.getElementById('country');
 
@@ -39,7 +43,7 @@ function getCountries(){
         if(response.status === 200){
             
             response.data.forEach(element => {
-                console.log('element', element);
+                //console.log('element', element);
 
                 country_select.innerHTML += `<option value="${element.name.official}">${element.name.official}</option>`;
             });
@@ -49,4 +53,16 @@ function getCountries(){
     });
 }
 
+function getUsers(){
+    axios({
+        method: 'get', 
+        url: 'http://localhost:3330/users/list',
+    }).then( response => {
+        console.log('response', response)
+    }).catch( error => {
+        console.log('error', error);
+    });
+}
+
 getCountries();
+getUsers();
