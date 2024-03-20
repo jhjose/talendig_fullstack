@@ -1,10 +1,20 @@
-let fruits = ["Banana", "Pear", "El Mango está muy bueno", "Uva", "Pera", "Chinola", "Kiwi"];
+let fruits = ["Melocotón", "Banana", "Mango", "Uva", "Pera", "Chinola", "Kiwi", "Fresa"];
+// --------------0----------1-------------2--------3------4--------5---------6--------7
 
 // Agregar valor al principio de la matriz
-fruits.unshift("Melocotón");
+//fruits.unshift("Melocotón");
 
 // Agregar valor al final de la matriz
-fruits.push("Fresa");
+//fruits.push("Fresa");
+
+// Recorrer elementos del Array 
+for(let i = 0; i < fruits.length; i++){
+    if(!i){
+        fruits.push("Aguatate");
+    }else{
+        fruits.unshift("Sandía");
+    }
+}
 
 // forEach para recorrer todos los elementos del Array (Matriz)
 fruits.forEach(function(element, indice){
@@ -21,8 +31,6 @@ function findFruit(value){
     console.log( value.search('Mango') );
 }
 
-console.log("fruits[2].search('Mango')", fruits[2].search('Chinola'))
-
-
+//console.log("fruits[2].search('Mango')", fruits[2].search('Chinola'))
 
 // split, slice

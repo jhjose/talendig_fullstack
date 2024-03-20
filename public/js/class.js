@@ -1,10 +1,12 @@
-class Car {
+class Car extends Radio {
 
     #password = "6a5sdf16as5f1";
     #age = 32;
     static transmision = 'automatically';
 
     constructor(password, age, name, year, color, matricula, chasis){
+        super();
+
         this.#password = password;
         this.#age = age;
         this.name = name;
@@ -24,6 +26,30 @@ class Car {
         alert('Se guardó la información del pago realizado.')
     }
 
+}
+
+class Radio {
+    #user_connected = false;
+    #user = 'suscriptor';
+
+    constructor(){
+        console.log('Ingresó al Radio')
+
+        this.#user = 'admin';
+    }
+
+    play(){
+        if(this.#user === 'admin'){
+            this.#user_connected = true;
+        }else{
+            this.#user_connected = false;
+            this.stop();
+        }
+    }
+
+    stop(){
+        this.#user = 'suscriptor';
+    }
 }
 
 

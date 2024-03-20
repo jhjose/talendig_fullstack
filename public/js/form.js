@@ -17,14 +17,17 @@ formCreateUser.addEventListener('submit', function(event){
         country: country,
     }
 
+    // Alternatives: fetch, XMLHttpRequest
     axios({
         // get: para obtener datos, post: insertar datos, put: actualizar datos, delete: eleminar datos.
         method: 'post', 
         url: 'http://localhost:3330/users/create',
         data: data,
     }).then( response => {
+        console.log('response', response);
+
         if(response.status === 200){
-            console.log('response', response);
+            
         }
     }).catch( error => {
         console.log('error', error);
