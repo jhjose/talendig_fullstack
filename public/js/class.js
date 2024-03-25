@@ -3,6 +3,7 @@ class Car extends Radio {
     #password = "6a5sdf16as5f1";
     #age = 32;
     static transmision = 'automatically';
+    startStatus = 0; 
 
     constructor(password, age, name, year, color, matricula, chasis){
         super();
@@ -16,6 +17,11 @@ class Car extends Radio {
         this.chasis - chasis;
     }
 
+    start(){
+        this.startStatus = true;
+        alert('Encendió el vehículo');
+    }
+
     buy(){
         // Run integration
         alert('Cliente realizó el pago correctamente.')
@@ -24,6 +30,17 @@ class Car extends Radio {
     payment(){
         // Save payment information.
         alert('Se guardó la información del pago realizado.')
+    }
+
+    verifyPassword(password){
+        if(password.length < 8){
+
+            return 'Debe ingresar al menos 8 caracteres';
+        }
+        else if(!password.includes('$')){
+            return 'Debes ingresar el símbolo de dollar en la contraseña.';
+        }
+
     }
 
 }
